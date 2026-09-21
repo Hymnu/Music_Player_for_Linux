@@ -1,0 +1,24 @@
+﻿
+## 规范等级定义：
+- 【必须】：代码必须遵循
+- 【推荐】：代码应当遵循，但在特殊情况下可以例外  
+- 【可选】：可以参考，根据具体情况决定是否采用
+
+1. 测试规范
+- 【推荐】需要运行测试时，请参照这个路径："Microsoft.PowerShell.Core\FileSystem::\\wsl.localhost\Ubuntu\home\swan_lee\dev"。mut在Ubuntu下
+- 【必须】请在wsl中调试，而非Windows bash
+- 【必须】需要使用wsl中的python进行调试时，使用source ~/myenv/bin/activate进入虚拟环境
+- 【推荐】运行测试参照这个命令：wsl bash -c "cd /home/swan_lee/dev; source ~/myenv/bin/activate; python test/test_dimensions.py"
+- 【推荐】测试输出过长，考虑让用户执行，或使用grep获取输出尾部
+
+2. 编写规范
+- 【推荐】：开始编程时，通过README.md了解项目
+- 【推荐】：API的使用在README.md中获取
+- 【推荐】：使用绝对引用导入模块，不要修改sys path
+- 【推荐】：编写的测试应在./test目录中
+- 【推荐】：新增测试时，若测试对象是同一模块，则应与已有测试合并
+
+3. 沟通规范
+- 【必须】：我的建议、请求有明显的知识性错误或自相矛盾时，请指出
+- 【必须】：需要使用新包时，告知我
+- 【可选】：当问题有多种解决方案、且没有明显优劣时，告知我进行选择

@@ -1,0 +1,47 @@
+﻿# 歌词配置
+lyrics:
+  # 歌词源优先级列表，按顺序尝试
+  # 支持的源: lrc, embedded
+  priority:
+    - embedded
+    - lrc
+
+  # LRC文件配置
+  lrc:
+    # 查找路径模板，支持变量: {filename}, {title}, {artist}, {album}
+    search_patterns:
+      - "{filename}.lrc"
+      - "{artist} - {title}.lrc"
+      - "lyrics/{filename}.lrc"
+
+    # 是否启用 charset-normalizer 自动检测编码
+    # true: 先自动检测，检测到的编码优先级最高
+    # false: 仅使用 encoding_priority 列表
+    use_charset_detection: true
+
+    # 编码优先级（当检测失败或禁用检测时使用）
+    encoding_priority:
+      - utf-8
+      - utf-16-le
+      - gbk
+      - gb2312
+      - big5
+      - shift_jis
+
+# 封面配置
+artwork:
+  # 图片读取策略
+  # auto: 根据像素阈值自动判断
+  # original: 强制使用原图
+  read_strategy: auto
+
+  # 像素阈值（自动策略下，低于此像素数使用原图）
+  # 默认 500,000 像素（约 707x707）
+  pixel_threshold: 500000
+
+  # 缩略图最大尺寸（像素）
+  # 当原图超过阈值时，缩放到此尺寸
+  thumbnail_max_size: 300
+
+  # 缩略图质量 (1-100)
+  thumbnail_quality: 85
