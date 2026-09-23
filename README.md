@@ -851,7 +851,7 @@ ParserFactory.register_parser(CustomParser)
 mutagen        # 音频元数据解析
 rich           # 终端UI渲染
 pylrc          # LRC歌词解析
-numpy          # 数值计算
+numpy          # 数值计算，暂未引入
 pillow         # 图像处理（封面处理）
 miniaudio      # 音频播放引擎
 pyyaml         # 配置文件解析
@@ -941,8 +941,8 @@ pyyaml         # 配置文件解析
 ### 开发中功能
 - [ ] 音量增益（自动增益/ReplayGain）
 - [ ] TUI界面
-    - TTY：curses
-    - 其他：texture
+    - 弱终端：curses
+    - 富终端：Textual
 - [ ] 播放列表管理界面
 - [ ] 配置文件管理
 
@@ -952,3 +952,4 @@ pyyaml         # 配置文件解析
 - [ ] 封面图像显示
 - [ ] 流媒体播放支持
 - [ ] 更多音频格式支持（APE、MPC、WV等）
+- [ ] 调试模式
